@@ -1,0 +1,30 @@
+<body class="registerbody">
+   
+    
+    
+    <section class="container .col lg-12 md-12">
+        <div class="login-container .col lg-12 md-12">
+            <div class="form-container">
+                <h1 class="opacity">REGISTER</h1>
+                <form [formGroup]="registration" (ngSubmit)="Register()">
+                    <input type="text" name="accntName" formControlName="aname" class="form-control" placeholder="Username Please .." required="" />
+                    <div *ngIf="(this.registration.get('aname')?.errors)&&(this.registration.get('aname')?.touched)"
+                            style="color: rgba(253, 253, 253, 0.925);margin-top:-10px;margin-bottom: 15px; font-family: 'Kanit', sans-serif; font-size: 15px; ">Invalid Username</div>
+                    <input type="text" name="acno" formControlName="acno" class="form-control" placeholder="User ID please .." required="">
+                    <div *ngIf="(this.registration.get('acno')?.errors)&&(this.registration.get('acno')?.touched)"
+                            style="color: rgba(253, 253, 253, 0.925);margin-top:-10px;margin-bottom: 15px; font-family: 'Kanit', sans-serif; font-size: 15px; ">Invalid Account number</div>
+                    <input type="password" name="pswd" formControlName="pswd" class="form-control" placeholder="Password .." required="" />
+                    <div *ngIf="(this.registration.get('pswd')?.errors)&&(this.registration.get('pswd')?.touched)"
+                            style="color: rgba(253, 253, 253, 0.925);margin-top:-10px;margin-bottom: 15px; font-family: 'Kanit', sans-serif; font-size: 15px; ">Invalid password</div>
+    
+                    <button class="opacity" type="submit" value="register">Register</button>
+                </form>
+                <div class="register-forget opacity">
+                    <a routerLink="" href="">LOGIN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+

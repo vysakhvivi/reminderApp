@@ -1,0 +1,18 @@
+<section class="container">
+        
+    <div class="login-container">
+       
+        <div class="form-container">
+            <h1 class="opacity">Update</h1>
+            <hr>
+            
+            <form #userform="ngForm" [formGroup]="eventform" class="" (ngSubmit)="updateevent()">
+                <div class="form-group">
+                    <input type="date" name="date" formControlName="date" class="tag-input form-control" placeholder="Enter the Date .." /></div>
+                <div class="form-group">
+                    <textarea class="form-control" name="des" formControlName="des" id="" cols="30" rows="5" placeholder="Add Description.."></textarea></div>
+                <button class="opacity1" type="submit" value="eventform">UPDATE REMINDER</button>
+                </form>
+        </div>
+    </div>
+</section>

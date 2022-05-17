@@ -1,0 +1,19 @@
+.heading{
+    color: rgb(252, 252, 252);
+    align-items:center;
+    text-align: center;
+    margin-top: 30px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:whitesmoke;
+    opacity: .8; /* Firefox */
+  }
+
+.loginbody{
+    background-image: url(../../Images/bglogin.jpg);
+    background-position: 100%;
+    background-repeat: repeat-y;
+}

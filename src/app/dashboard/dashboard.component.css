@@ -1,0 +1,91 @@
+.logout{
+margin-left: 50px;
+margin-top: 30px;
+margin-right:100px;
+margin-bottom: 20px;
+position: relative;
+}
+
+.deleteacc{
+    align-items: flex-end;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.089);
+}
+
+.deleteacc:hover{
+    border: 1px white solid;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:whitesmoke;
+    opacity: .8; /* Firefox */
+  }
+
+  .eventbutton{
+      color: rgb(55,71,192);
+  }
+
+  .eventbutton:hover{
+     
+    border: 1px black solid;
+  }
+
+  .dashboardbody{
+      background-image: url(../../Images/bgdashboard.jpg);
+      background-position: center;
+  }
+
+  @media screen and  (width: 1366px)
+{
+    .userdate{
+        position: absolute;
+        font-size: 20px;
+        color: black;
+        font-family: 'Sriracha', cursive;
+        z-index: 1;
+        margin-left:560px ;
+        margin-top: -530px;
+        text-align: center;
+        
+    }
+    .dashboardbody{
+        background-image: url(../../Images/bgmediumbackground.jpg);
+        background-position: center;
+    }
+}
+
+@media screen and  (width: 1600px)
+{
+    .userdate{
+        position: absolute;
+        font-size: 20px;
+        color: black;
+        font-family: 'Sriracha', cursive;
+        z-index: 1;
+        margin-left:610px ;
+        margin-top: -550px;
+        text-align: center;
+        
+    }
+    .dashboardbody{
+        background-image: url(../../Images/bgmediumbackground.jpg);
+        background-position: center;
+    }
+}
+
+
+@media screen and  (min-width: 1920px)
+{
+  .userdate{
+      position: absolute;
+      font-size: 24px;
+      color: black;
+      font-family: 'Sriracha', cursive;
+      z-index: 1;
+      margin-left:700px;
+      margin-top: -550px;
+      text-align: center;
+    }
+
+
+  }
