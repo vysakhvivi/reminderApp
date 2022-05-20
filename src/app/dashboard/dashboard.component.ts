@@ -84,7 +84,7 @@ if(this.eventform.valid)
 
   oncancel()
   {
-    this.acno=""
+    this.uid=""
   }
 
   ondelete(event:any)

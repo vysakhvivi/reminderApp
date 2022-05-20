@@ -45,7 +45,7 @@ onDelete(event: any) {
 }
 
 Cancelrem() {
-  this.uid="";
+  this.eventId="";
   console.log(this.eventId);
   
 }

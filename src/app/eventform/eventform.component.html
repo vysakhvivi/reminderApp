@@ -10,7 +10,7 @@
 </div>
 <div class="container cont">
     <app-deleterem
-        [toDeleteEventId]="uid"
+        [toDeleteEventId]="eventId"
         (onCancel)="Cancelrem()"
         (deleteEvent)="deleteEvent($event)"
       ></app-deleterem>
@@ -40,7 +40,7 @@
                 <td>{{event.time}}</td>
                 <td>{{event.description}}</td>
                 <td><a href="" routerLink="/updateform/{{event.uid}}"><button class="btn btn-warning" style="width:100% ;" ><i class="fas fa-calendar"></i></button></a></td>
-                <td><button id="{{event.uid}}" value="" (click)="onDelete($event)" class="btn btn-danger" style="width:100% ;"><i class="fas fa-calendar-times"></i></button></td>
+                <td><button id="{{event.id}}" (click)="onDelete($event)" class="btn btn-danger" style="width:100% ;"><i class="fas fa-calendar-times"></i></button></td>
             </tr>                
         </tbody>
     </table>
