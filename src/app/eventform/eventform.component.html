@@ -8,26 +8,39 @@
 <div>
     <button class="btn btn-success " routerLink="/dashboard" style="margin-left:100px ;">Home</button>
 </div>
+<div class="container cont">
+    <app-deleterem
+        [toDeleteEventId]="uid"
+        (onCancel)="Cancelrem()"
+        (deleteEvent)="deleteEvent($event)"
+      ></app-deleterem>
+</div>
 
-<section class="container " style="margin-top:-200px ;">
 
-        <table class="table table-hover border-end border-bottom border  p-3 gap-3">
+
+
+<section class="container " style="margin-top:-350px ;">
+    
+
+        <table class="table table-hover border-end border-bottom border p-3 gap-3">
         <thead>
             <tr>
-                <th>No.</th>
-                <th>Event Date</th>
-                <th>Event Description</th>
+                <th>#</th>
+                <th>Reminder Date</th>
+                <th>Reminder Time</th>
+                <th>Reminder Description</th>
                 <th style="text-align: center ;">Update</th>
                 <th style="text-align: center ;">Delete</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let e of events; let i ='index+1' ">
-                <td>{{i}}</td>
-                <td>{{e.date}}</td>
-                <td>{{e.description}}</td>
-                <td><a href="" routerLink="/updateform/{{e.rno}}"><button class="btn btn-warning" style="width:100% ;" ><i class="fas fa-calendar"></i></button></a></td>
-                <td><button (click)="delete(i)" class="btn btn-danger" style="width:100% ;"><i class="fas fa-calendar-times"></i></button></td>
+            <tr *ngFor="let event of events;">
+                <th scope="row">{{ events.indexOf(event) + 1 }}</th>
+                <td>{{event.date}}</td>
+                <td>{{event.time}}</td>
+                <td>{{event.description}}</td>
+                <td><a href="" routerLink="/updateform/{{event.uid}}"><button class="btn btn-warning" style="width:100% ;" ><i class="fas fa-calendar"></i></button></a></td>
+                <td><button id="{{event.uid}}" value="" (click)="onDelete($event)" class="btn btn-danger" style="width:100% ;"><i class="fas fa-calendar-times"></i></button></td>
             </tr>                
         </tbody>
     </table>

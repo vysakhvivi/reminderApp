@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeleteeventComponent } from './deleteevent/deleteevent.component';
 import { UpdateeventComponent } from './updateevent/updateevent.component';
 import { AlertmsgComponent } from './alertmsg/alertmsg.component';
+import { DeleteremComponent } from './deleterem/deleterem.component';
 
 
 
@@ -24,7 +25,8 @@ import { AlertmsgComponent } from './alertmsg/alertmsg.component';
     EventformComponent,
     DeleteeventComponent,
     UpdateeventComponent,
-    AlertmsgComponent
+    AlertmsgComponent,
+    DeleteremComponent
   ],
   imports: [
     BrowserModule,

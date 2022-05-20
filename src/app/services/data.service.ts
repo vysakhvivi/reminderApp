@@ -6,6 +6,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
+  viewEvent(userid: any) {
+    throw new Error('Method not implemented.');
+  }
 
   currentuser:any;
   currentacno:any;
@@ -33,10 +36,11 @@ export class DataService {
   return  this.http.post('http://localhost:3000/register',data)
   }
 
-  addevent(acno:any,date:any,des:any,uid:any){
+  addevent(acno:any,date:any,time:any,des:any,uid:any){
     const data={
       acno,
       date,
+      time,
       des,
       uid
     }
@@ -50,9 +54,10 @@ export class DataService {
     return  this.http.post('http://localhost:3000/eventform',data)
   }
 
-  ondelete(acno:any)
-  {
-    return this.http.delete('http://localhost:3000/ondelete/'+acno)
+  deleteEvent(toDeleteEventId: any) {
+    return this.http.delete(
+      'http://localhost:3000/deleteEvent/' + toDeleteEventId
+    );
   }
 
   // updateform(date:any,des:any,uid:any)
@@ -65,8 +70,22 @@ export class DataService {
   //   return this.http.put('http://localhost:3000/updateform/',data)
   // }
 
-  getcurrentdata(i:any){
-    return this.http.get('http://localhost:3000/updateform/${i}'+i)
+ 
+  updateevent(date:any,time:any,des:any,uid:any){
+    const data={
+      date,
+      time,
+      des,
+
+    }
+  return  this.http.post('http://localhost:3000/updateform/'+uid,data)
+  }
+
+  
+
+  ondelete(acno:any)
+  {
+    return this.http.delete('http://localhost:3000/ondelete/'+acno)
   }
 
 

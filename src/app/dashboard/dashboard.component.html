@@ -28,8 +28,21 @@
                         <input type="date" name="date" formControlName="date" class="tag-input form-control"
                             placeholder="Enter the Date .." required>
                     </div>
+
+                    
                     <div *ngIf="(this.eventform.get('date')?.errors)&&(this.eventform.get('date')?.touched)"
-                          style="color: rgb(255, 255, 255);margin-bottom: 8px;;">Invalid !!</div>
+                          style="color: rgb(255, 255, 255);margin-bottom: 8px;;">Invalid Date !!</div>
+                         
+                        <!-- time -->
+
+                          <div class="form-group">
+                            <input type="time" name="time" formControlName="time" class="tag-input form-control"
+                                placeholder="Enter the Time .." required>
+                        </div>
+                        <div *ngIf="(this.eventform.get('time')?.errors)&&(this.eventform.get('time')?.touched)"
+                              style="color: rgb(255, 255, 255);margin-bottom: 8px;;">Invalid Time !!</div>      
+
+                          
                     <div class="form-group">
                         <textarea class="form-control" name="des" formControlName="des" id="" cols="30" rows="5"
                             placeholder="Add Description.." required></textarea>

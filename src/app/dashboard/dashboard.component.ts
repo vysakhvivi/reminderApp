@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
   uid=""
   user=""
   logindate:any
+  time=""
 
   
 
@@ -30,7 +31,8 @@ export class DashboardComponent implements OnInit {
 
   eventform = this.form.group({
     date: ['',Validators.required],
-    des: ['',Validators.required]
+    des: ['',Validators.required],
+    time:['',Validators.required]
   })
 
   ngOnInit(): void {
@@ -42,6 +44,11 @@ export class DashboardComponent implements OnInit {
     console.log(acno);
 
     var date = this.eventform.value.date
+
+    var time=this.eventform.value.time
+
+    console.log(time);
+    
   
     
     var des = this.eventform.value.des
@@ -50,7 +57,7 @@ export class DashboardComponent implements OnInit {
     var uid=uuidv4();
 if(this.eventform.valid)
    { 
-     var result = this.ds.addevent(acno,date,des,uid)
+     var result = this.ds.addevent(acno,date,time,des,uid)
       .subscribe((result: any) => {
         if (result) {
           alert(result.message)
